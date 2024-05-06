@@ -1,0 +1,137 @@
+:root {
+	--primary: #44b678;
+	--accent: #286d34;
+	--vibrant: #17d1b2;
+	--vibrant-shade: #17d1b280;
+	--dark: #0a152f;
+	--white: #ffffff;
+	--white-shade: #eef0f5;
+
+	--body: #e8e8e8;
+
+	--font: "Open Sans", sans-serif;
+}
+
+html {
+	scroll-behavior: smooth;
+}
+body {
+	background: var(--body);
+	font-family: var(--font);
+	font-size: 16px;
+	font-weight: 400;
+	position: relative;
+}
+.container {
+	max-width: 144rem;
+}
+.column.column-0 {
+	flex: 0 0 auto;
+	width: auto;
+}
+.inline-flex {
+	display: inline-flex;
+	align-items: center;
+}
+.flex {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.button {
+	margin-bottom: 0;
+	height: auto;
+	text-transform: initial;
+	font-family: var(--font);
+	font-size: 14px;
+	font-weight: 500;
+	border-radius: 5px;
+}
+
+/* ----OutLine Button---- */
+.button.button-outline {
+	border-color: var(--white-shade);
+	color: var(--white-shade);
+}
+.button.button-outline:hover {
+	background: var(--accent);
+	border-color: var(--accent);
+	color: var(--white);
+}
+
+/* ----Header---- */
+.pilar_header {
+	padding: 15px 0px !important;
+	background: var(--dark);
+}
+.pilar_header .row {
+	align-items: center;
+	gap: 15px;
+}
+
+/* ----Logo---- */
+.pilar_logo {
+	max-width: 140px;
+	display: flex;
+	align-content: center;
+	align-items: center;
+}
+.pilar_logo img {
+	width: 100%;
+	object-fit: cover;
+}
+
+/* ----Hrader Breadcrumbs---- */
+.breadcrumbs {
+	margin-bottom: 0px;
+}
+.breadcrumbs li {
+	display: inline;
+	margin-right: 5px;
+	color: var(--white-shade);
+	font-size: 14px;
+	font-weight: 400;
+}
+.breadcrumbs li:not(:last-child):after {
+	content: "-";
+	margin-left: 10px;
+	margin-right: 10px;
+}
+.pilar_indicator {
+	height: 25px;
+	width: 25px;
+	border-radius: 50%;
+	background: var(--white-shade);
+	color: var(--dark);
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	line-height: normal;
+	margin-right: 5px;
+	font-weight: 600;
+}
+.active .pilar_indicator {
+	background: var(--primary);
+	color: var(--white);
+}
+
+/* ----Main Wrapper---- */
+main .pilar_main_wrapper {
+	padding: 50px 0px;
+}
+.pilar_main_wrapper .pilar_devider {
+	justify-content: space-between;
+}
+.pilar_product_container {
+	height: 100vh;
+	background: var(--white);
+	border-radius: 12px;
+	display: flex;
+	flex-direction: column;
+}
+
+.pilar_product_container .pillar_product_footer {
+	display: inline-block;
+	width: fit-content;
+	margin-top: auto;
+}
