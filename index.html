@@ -15,6 +15,7 @@
     <link rel="stylesheet" href="./assets/css/style.css">
 </head>
 <body>
+    <!-- Header -->
     <header class="pilar_header">
         <div class="container">
             <div class="row">
@@ -27,23 +28,48 @@
                     <div class="flex">
                         <ul class="breadcrumbs">
                             <li class="inline-flex active">
-                                <span class="pilar_indicator">1</span>
+                                <span class="pilar_indicator">
+                                    <span class="number">1</span>
+                                    <span class="check_mark">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="10.955" height="7.955" viewBox="0 0 10.955 7.955"><path id="check" d="M1.727-5.25l.864-.886,3,2.955,6.2-6.182.886.886L5.591-1.409Z" transform="translate(-1.727 9.364)" fill="#44b678"/></svg>
+                                    </span>
+                                </span>
                                 Ulkomitat
                             </li>
                             <li class="inline-flex">
-                                <span class="pilar_indicator">2</span>
+                                <span class="pilar_indicator">
+                                    <span class="number">2</span>
+                                    <span class="check_mark">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="10.955" height="7.955" viewBox="0 0 10.955 7.955"><path id="check" d="M1.727-5.25l.864-.886,3,2.955,6.2-6.182.886.886L5.591-1.409Z" transform="translate(-1.727 9.364)" fill="#44b678"/></svg>
+                                    </span>
+                                </span>
                                 Valitse Materiaali
                             </li>
                             <li class="inline-flex">
-                                <span class="pilar_indicator">3</span>
+                                <span class="pilar_indicator">
+                                    <span class="number">3</span>
+                                    <span class="check_mark">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="10.955" height="7.955" viewBox="0 0 10.955 7.955"><path id="check" d="M1.727-5.25l.864-.886,3,2.955,6.2-6.182.886.886L5.591-1.409Z" transform="translate(-1.727 9.364)" fill="#44b678"/></svg>
+                                    </span>
+                                </span>
                                 Kaapin Sisätila
                             </li>
                             <li class="inline-flex">
-                                <span class="pilar_indicator">4</span>
+                                <span class="pilar_indicator">
+                                    <span class="number">4</span>
+                                    <span class="check_mark">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="10.955" height="7.955" viewBox="0 0 10.955 7.955"><path id="check" d="M1.727-5.25l.864-.886,3,2.955,6.2-6.182.886.886L5.591-1.409Z" transform="translate(-1.727 9.364)" fill="#44b678"/></svg>
+                                    </span>
+                                </span>
                                 Ovet Ja Vetimet
                             </li>
                             <li class="inline-flex">
-                                <span class="pilar_indicator">5</span>
+                                <span class="pilar_indicator">
+                                    <span class="number">5</span>
+                                    <span class="check_mark">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="10.955" height="7.955" viewBox="0 0 10.955 7.955"><path id="check" d="M1.727-5.25l.864-.886,3,2.955,6.2-6.182.886.886L5.591-1.409Z" transform="translate(-1.727 9.364)" fill="#44b678"/></svg>
+                                    </span>
+                                </span>
                                 Lisäominaisuudet
                             </li>
                         </ul>
@@ -54,35 +80,221 @@
                 </div>
             </div>
         </div>
-    </header>
+    </header><!-- Header -->
 
+    <!-- Main -->
     <main>
         <div class="container">
             <div class="pilar_main_wrapper">
                 <div class="row pilar_devider">
+                    <!-- Left Column -->
                     <div class="column column-50">
-                        <div class="pilar_product_container">
-                            <h1>Hello</h1>
+                        <div class="pilar_product_card">
+                            <div class="step" id="step1">
+                                <h2>Määrittele ulkomitat</h2>
+                                <p>This is step 1 content.</p>
+                            </div>
+                              
+                            <div class="step" id="step2">
+                                <h2>Step 2</h2>
+                                <p>This is step 2 content.</p>
+                            </div>
+                              
+                            <div class="step" id="step3">
+                                <h2>Step 3</h2>
+                                <p>This is step 3 content.</p>
+                            </div>
+                            
+                            <div class="step" id="step4">
+                                <h2>Step 4</h2>
+                                <p>This is step 4 content.</p>
+                            </div>
+                            
+                            <div class="step" id="step5">
+                                <h2>Step 5</h2>
+                                <p>This is step 5 content.</p>
+                            </div>
+
+                            <div class="step" id="step6">
+                                <h2>Step 6</h2>
+                                <p>This is step 6 content.</p>
+                            </div>
 
                             <div class="pillar_product_footer">
-                                <div class="flex ">
-
+                                <div class="row">
+                                    <div class="column">
+                                        <button class="button button-previous" id="prevBtn">
+                                            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="14" height="14" viewBox="0 0 14 14">
+                                              <defs>
+                                                <clipPath>
+                                                  <rect id="Rectangle_99" data-name="Rectangle 99" width="14" height="14" fill="#424242"/>
+                                                </clipPath>
+                                              </defs>
+                                              <g id="chevion-previous">
+                                                <g id="layer1" transform="translate(2.604 0.181)">
+                                                  <path id="path9429" d="M19.443,1726.66a.97.97,0,0,1,.638,1.718l-5.935,5.085,5.935,5.083a.97.97,0,1,1-1.26,1.468l-6.8-5.814a.97.97,0,0,1,0-1.476l6.8-5.82a.969.969,0,0,1,.621-.245Z" transform="translate(-11.686 -1726.66)" fill="#424242"/>
+                                                </g>
+                                              </g>
+                                            </svg>
+                                            Takaisin
+                                        </button>
+                                    </div>
+                                    <div class="column">
+                                        <button class="button button-next float-right" id="nextBtn">
+                                            Seuraava
+                                            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="14" height="14" viewBox="0 0 14 14">
+                                                <defs>
+                                                  <clipPath>
+                                                    <rect id="Rectangle_99" data-name="Rectangle 99" width="14" height="14" transform="translate(872.819 813.819)" fill="#f0f5f3"/>
+                                                  </clipPath>
+                                                </defs>
+                                                <g id="chevion-next" transform="translate(-872.819 -813.819)">
+                                                  <g id="layer1" transform="translate(875.423 814)">
+                                                    <path id="path9429" d="M12.72,1726.66a.97.97,0,0,0-.638,1.718l5.935,5.085-5.935,5.083a.97.97,0,1,0,1.26,1.468l6.8-5.814a.97.97,0,0,0,0-1.476l-6.8-5.82a.969.969,0,0,0-.621-.245Z" transform="translate(-11.686 -1726.66)" fill="#f0f5f3"/>
+                                                  </g>
+                                                </g>
+                                            </svg>
+                                        </button>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    </div><!-- Left Column -->
                     
-                    <div class="column column-40">
+                    <!-- Right Column -->
+                    <div class="column column-50">
+                        <div class="row">
+                            <!-- Product Settings Col -->
+                            <div class="column">
+                                <div class="pilar_bookmark">
+                                    <button class="button button-settings">
+                                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24" height="24" viewBox="0 0 24 24">
+                                            <defs>
+                                            <clipPath>
+                                                <rect id="Rectangle_86" data-name="Rectangle 86" width="24" height="24" transform="translate(1063 104)" fill="#0a152f"/>
+                                            </clipPath>
+                                            </defs>
+                                            <g id="save" transform="translate(-1063 -104)">
+                                            <g id="bookmark" transform="translate(1063 104)">
+                                                <path id="Path_25" data-name="Path 25" d="M18.781,24a2.534,2.534,0,0,1-1.359-.4l-5.187-3.293a.445.445,0,0,0-.471,0L6.577,23.6a2.6,2.6,0,0,1-3.123-.311,2.514,2.514,0,0,1-.781-1.835V2.541A2.546,2.546,0,0,1,5.216,0h13.57a2.544,2.544,0,0,1,2.541,2.541V21.456A2.547,2.547,0,0,1,18.781,24ZM12,18.139a2.534,2.534,0,0,1,1.363.4l5.187,3.292a.426.426,0,0,0,.232.07.445.445,0,0,0,.443-.441V2.541a.442.442,0,0,0-.44-.439H5.216a.44.44,0,0,0-.439.439V21.456a.416.416,0,0,0,.131.314.44.44,0,0,0,.544.057l5.187-3.293a2.536,2.536,0,0,1,1.362-.4Z" fill="#0a152f"/>
+                                            </g>
+                                            </g>
+                                        </svg>
+                                    </button>
+                                </div>
+                                <div class="pilar_size_view">
+                                    <button class="button button-settings">
+                                        <svg id="grid" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24" height="24" viewBox="0 0 24 24">
+                                            <defs>
+                                            <clipPath>
+                                                <rect id="Rectangle_167" data-name="Rectangle 167" width="24" height="24" fill="#0a152f"/>
+                                            </clipPath>
+                                            </defs>
+                                            <g id="Mask_Group_35" data-name="Mask Group 35">
+                                            <g id="grid-2" data-name="grid" transform="translate(2.719 2.719)">
+                                                <path id="Path_52" data-name="Path 52" d="M23.3,18.281H6.422a.7.7,0,0,1-.7-.7V.7a.7.7,0,0,1,.7-.7H23.3a.7.7,0,0,1,.7.7V17.578A.7.7,0,0,1,23.3,18.281ZM18.375,9.844H15.563v2.813h2.813Zm1.406,2.813h2.813V9.844H19.781Zm-4.219,1.406v2.813h2.813V14.063Zm-1.406,0H11.344v2.813h2.813Zm0-1.406V9.844H11.344v2.813ZM9.938,9.844H7.125v2.813H9.938ZM7.125,8.438H9.938V5.625H7.125Zm4.219,0h2.813V5.625H11.344Zm2.813-4.219V1.406H11.344V4.219Zm1.406,0h2.813V1.406H15.563Zm0,1.406V8.438h2.813V5.625Zm4.219,2.813h2.813V5.625H19.781Zm2.813,5.625H19.781v2.813h2.813ZM9.938,16.875V14.063H7.125v2.813ZM7.125,4.219H9.938V1.406H7.125ZM19.781,1.406V4.219h2.813V1.406Z" transform="translate(-5.719)" fill="#0a152f"/>
+                                            </g>
+                                            </g>
+                                        </svg>
+                                    </button>
+                                    <button class="button button-settings">                                      
+                                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24" height="24" viewBox="0 0 24 24">
+                                            <defs>
+                                            <clipPath>
+                                                <rect id="Rectangle_181" data-name="Rectangle 181" width="24" height="24" fill="#0a152f"/>
+                                            </clipPath>
+                                            </defs>
+                                            <g id="grid-measurements">
+                                            <g id="grid">
+                                                <path id="Path_64" data-name="Path 64" d="M23.3,0H6.422a.7.7,0,0,0-.7.7V17.578a.7.7,0,0,0,.7.7H23.3a.7.7,0,0,0,.7-.7V.7A.7.7,0,0,0,23.3,0ZM18.375,8.438H15.563V5.625h2.813Zm1.406-2.812h2.813V8.438H19.781ZM15.563,4.219V1.406h2.813V4.219Zm-1.406,0H11.344V1.406h2.813Zm0,1.406V8.438H11.344V5.625ZM9.938,8.438H7.125V5.625H9.938ZM7.125,9.844H9.938v2.813H7.125Zm4.219,0h2.813v2.813H11.344Zm2.813,4.219v2.813H11.344V14.063Zm1.406,0h2.813v2.813H15.563Zm0-1.406V9.844h2.813v2.813Zm4.219-2.812h2.813v2.813H19.781Zm2.813-5.625H19.781V1.406h2.813ZM9.938,1.406V4.219H7.125V1.406ZM7.125,14.063H9.938v2.813H7.125Zm12.656,2.813V14.063h2.813v2.813Z" fill="#0a152f"/>
+                                                <path id="Path_65" data-name="Path 65" d="M23.3,19.781H20.484a.7.7,0,0,0-.7.7v.7H4.219v-.7a.7.7,0,0,0-.7-.7h-.7V4.219h.7a.7.7,0,0,0,.7-.7V.7a.7.7,0,0,0-.7-.7H.7A.7.7,0,0,0,0,.7V3.516a.7.7,0,0,0,.7.7h.7V19.781H.7a.7.7,0,0,0-.7.7V23.3a.7.7,0,0,0,.7.7H3.516a.7.7,0,0,0,.7-.7v-.7H19.781v.7a.7.7,0,0,0,.7.7H23.3a.7.7,0,0,0,.7-.7V20.484A.7.7,0,0,0,23.3,19.781Z" fill="#0a152f"/>
+                                            </g>
+                                            </g>
+                                        </svg>
+                                    </button>
+                                </div>
+                                
+                                <div class="pilar_form_Reset">
+                                    <button class="button button-settings"> 
+                                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24" height="24" viewBox="0 0 24 24">
+                                            <defs>
+                                            <clipPath id="clip-path">
+                                                <rect id="Rectangle_83" data-name="Rectangle 83" width="24" height="24" transform="translate(1057 104)" fill="#0a152f"/>
+                                            </clipPath>
+                                            </defs>
+                                            <g id="restart" transform="translate(-1057 -104)" clip-path="url(#clip-path)">
+                                            <path id="XMLID_6_" d="M23.121,4.427l-6.3-1.254a1.091,1.091,0,0,0-1.283.857l-1.254,6.3a1.091,1.091,0,1,0,2.14.426L17.2,6.843A8,8,0,1,1,4.52,5.015,1.091,1.091,0,1,0,2.977,3.472,10.177,10.177,0,1,0,19.156,5.863l3.54.7a1.091,1.091,0,1,0,.426-2.14Z" transform="translate(1057 104)" fill="#0a152f"/>
+                                            </g>
+                                        </svg>  
+                                    </button>
+                                </div>
+                            </div><!-- Product Settings Col -->
 
-                        <div class="pilar_product_container">
-                            <h1>Hello</h1>
+                            <!-- Product Details Col -->
+                            <div class="column column-90">
+                                <div class="pilar_product_card">
+                                    <!-- Product Image -->
+                                    <div class="pilar_product_image">
+                                        <img src="./assets/images/m4.png" alt="Product Image">
+                                    </div><!-- Product Image -->
+
+                                    <!-- Right Card Footer -->
+                                    <div class="pillar_product_footer pilar_price_section">
+                                        <div class="row flex">
+                                            <!-- Price Col -->
+                                            <div class="column">
+                                                <h2 class="pilar_product_price">829 EUR</h2>
+                                                <p class="pilar_price_content"><span class="text-primary">Donec consectetuer.</span> Dolores 5-7 eudat.</p>
+                                                <p class="pilar_price_vat">dlrs. VAT</p>
+                                            </div><!-- Price Col -->
+
+                                            <!-- Cart Button -->
+                                            <div class="column">
+                                                <button class="button button-cart float-right disabled" id="cartBtn">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24" height="24" viewBox="0 0 24 24">
+                                                        <defs>
+                                                        <clipPath>
+                                                            <rect id="Rectangle_79" data-name="Rectangle 79" width="24" height="24" transform="translate(712 812)" fill="#fff"/>
+                                                        </clipPath>
+                                                        </defs>
+                                                        <g id="shopping-bag" transform="translate(-712 -812)">
+                                                        <g id="cart" transform="translate(712 812)">
+                                                            <g id="Group_55" data-name="Group 55">
+                                                            <g id="Group_54" data-name="Group 54">
+                                                                <path id="Path_18" data-name="Path 18" d="M23.848,3.491a.692.692,0,0,0-.541-.26H4.882L4.367,1A.692.692,0,0,0,3.692.462h-3a.692.692,0,0,0,0,1.385H3.142L6.639,17a.692.692,0,0,0,.675.537H21.185a.692.692,0,1,0,0-1.385H7.864l-.532-2.308h13.9a.692.692,0,0,0,.675-.54l2.077-9.231A.692.692,0,0,0,23.848,3.491Z" fill="#fff"/>
+                                                            </g>
+                                                            </g>
+                                                            <g id="Group_57" data-name="Group 57">
+                                                            <g id="Group_56" data-name="Group 56">
+                                                                <path id="Path_19" data-name="Path 19" d="M10.154,18.462A2.538,2.538,0,1,0,12.692,21,2.541,2.541,0,0,0,10.154,18.462Z" fill="#fff"/>
+                                                            </g>
+                                                            </g>
+                                                            <g id="Group_59" data-name="Group 59">
+                                                            <g id="Group_58" data-name="Group 58">
+                                                                <path id="Path_20" data-name="Path 20" d="M18.462,18.462A2.538,2.538,0,1,0,21,21,2.541,2.541,0,0,0,18.462,18.462Z" fill="#fff"/>
+                                                            </g>
+                                                            </g>
+                                                        </g>
+                                                        </g>
+                                                    </svg>
+                                                    Lisää Ostoskoriin
+                                                </button>
+                                            </div><!-- Cart Button -->
+
+                                        </div>
+                                    </div><!-- Right Card Footer -->
+
+                                </div>
+                            </div><!-- Product Details Col -->
+
                         </div>
-                    </div>
+                    </div><!-- Right Column -->
                 </div>
             </div>
         </div>
-    </main>
+    </main><!-- Main -->
 
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="./assets/js/script.js"></script>
 </body>
 </html>

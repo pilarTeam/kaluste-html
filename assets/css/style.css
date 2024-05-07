@@ -6,6 +6,9 @@
 	--dark: #0a152f;
 	--white: #ffffff;
 	--white-shade: #eef0f5;
+	--white-shade-2: #F8F8F8;
+
+	--card-button-1: #E5E5E5;
 
 	--body: #e8e8e8;
 
@@ -21,6 +24,30 @@ body {
 	font-size: 16px;
 	font-weight: 400;
 	position: relative;
+}
+h1,h2,h3,h4,h5,h6{
+	font-family: var(--font);
+	color: var(--dark);
+	font-weight: 700;
+}
+
+h1 {
+	font-size: 2em;
+}
+h2 {
+	font-size: 1.5em;
+}
+h3 {
+	font-size: 1.17em;
+}
+h4 {
+	font-size: 1em;
+}
+h5 {
+	font-size: 0.83em;
+}
+h6 {
+	font-size: 0.67em;
 }
 .container {
 	max-width: 144rem;
@@ -38,6 +65,9 @@ body {
 	align-items: center;
 	justify-content: center;
 }
+.justify-between{
+	justify-content: space-between;
+}
 .button {
 	margin-bottom: 0;
 	height: auto;
@@ -46,6 +76,12 @@ body {
 	font-size: 14px;
 	font-weight: 500;
 	border-radius: 5px;
+}
+
+.disabled{
+	opacity: 0.7;
+	pointer-events: auto;
+    cursor: not-allowed;
 }
 
 /* ----OutLine Button---- */
@@ -57,6 +93,46 @@ body {
 	background: var(--accent);
 	border-color: var(--accent);
 	color: var(--white);
+}
+
+/* ----Next Prev Button---- */
+.button-previous,.button-next,.button-cart{
+	display: inline-flex;
+    align-items: center;
+	gap: 10px;
+	font-weight: 600;
+}
+.button.button-previous{
+	background-color: var(--card-button-1);
+	border-color: var(--card-button-1);
+	color: #424242;
+}
+.button.button-next{
+	background-color: var(--accent);
+	border-color: var(--accent);
+	color: #F0F5F3;
+}
+
+/* Cart Button */
+.button.button-cart{
+	background-color: var(--primary);
+	border-color: var(--primary);
+	color: #F0F5F3;
+	padding: 0.5rem 3.0rem;
+}
+
+/* Settings Button */
+.button.button-settings {
+	padding: initial;
+	width: 40px;
+    height: 40px;
+    border-radius: 8px;
+    display: inline-grid;
+    align-items: center;
+    justify-content: center;
+    /* padding: 26px; */
+    background: var(--white);
+    border-color: var(--white);
 }
 
 /* ----Header---- */
@@ -114,6 +190,19 @@ body {
 	background: var(--primary);
 	color: var(--white);
 }
+.done.active .pilar_indicator {
+	background: var(--white);
+}
+
+.pilar_indicator .check_mark {
+	display: none;
+}
+.done.active .pilar_indicator .check_mark {
+	display: block;
+}
+.done.active .pilar_indicator .number {
+	display: none;
+}
 
 /* ----Main Wrapper---- */
 main .pilar_main_wrapper {
@@ -122,16 +211,88 @@ main .pilar_main_wrapper {
 .pilar_main_wrapper .pilar_devider {
 	justify-content: space-between;
 }
-.pilar_product_container {
-	height: 100vh;
+
+/* Product Card */
+.pilar_product_card {
+	height: 80vh;
 	background: var(--white);
 	border-radius: 12px;
 	display: flex;
 	flex-direction: column;
 }
 
-.pilar_product_container .pillar_product_footer {
+.pilar_product_card .pillar_product_footer {
 	display: inline-block;
-	width: fit-content;
+	width: 100%;
 	margin-top: auto;
+	padding: 15px;
+	background: var(--white-shade-2);
+	border-radius: 0px 0px 12px 12px;
+}
+
+.pillar_product_footer.pilar_price_section{
+	background: var(--dark);
+	padding: 30px 40px;
+}
+
+
+/* Step */
+
+.step {
+    display: none;
+}
+
+/* Settings */
+.pilar_bookmark{
+	text-align: right;
+	margin-bottom: 30px;
+}
+
+.pilar_size_view{
+	text-align: right;
+	margin-bottom: 30px;
+}
+.pilar_size_view .button:first-child{
+	margin-bottom: 10px;
+}
+
+.pilar_form_Reset{
+	text-align: right;
+}
+
+/* Product Image */
+.pilar_product_image{
+	max-width: 345px;
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+}
+.pilar_product_image img{
+	width: 100%;
+	object-fit: contain;
+}
+
+/* ---Product Price--- */
+.pilar_product_price{
+	font-size: 36px;
+	font-weight: 700;
+	color: var(--white);
+	margin-bottom: 12px;
+}
+.pilar_price_content{
+	color: #E4EDEA;
+	font-size: 12px;
+	margin-bottom: 5px;
+}
+
+.pilar_price_content span{
+	color: var(--primary);
+}
+
+.pilar_price_vat{
+	color: #F0F5F3;
+	font-size: 14px;
+	margin-bottom: 0px;
 }
