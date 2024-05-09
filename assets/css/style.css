@@ -58,7 +58,7 @@ hr{
 	border-top: 0.1rem solid #DFE4E3;
     margin: 2rem 0;
 }
-input{
+input,textarea{
 	border-radius: 6px;
 	border: 1px solid #C3CECC;
 	font-size: 14px;
@@ -67,13 +67,24 @@ input{
 	font-family: var(--font);
 	margin-bottom: 0;
 }
-input:focus{
+textarea{
+	min-height: auto;
+	height: auto;
+}
+input:focus,textarea:focus{
 	border-color: var(--primary) !important;
 }
 input[type=radio]:checked {
 	accent-color: green;
 }
-
+a{
+	text-decoration: underline;
+	font-weight: 600;
+	color: var(--vibrant);
+}
+form{
+	margin-bottom: 0;
+}
 .container {
 	max-width: 144rem;
 	position: initial;
@@ -243,17 +254,22 @@ main.pilar_main_wrapper {
 
 /* Product Card */
 .pilar_product_card {
-	height: 80vh;
 	background: var(--white);
 	border-radius: 12px;
 	display: flex;
 	flex-direction: column;
 }
 
+/* Card Header */
+.pilar_card_header{
+	min-height: 115px;
+}
+
 /* card Body */
 .pilar_card_body {
-    height: calc(100% - 200px);
+    height: 55rem;
     overflow: auto;
+	scroll-behavior: smooth;
 }
 .pilar_card_body::-webkit-scrollbar {
     display: none;
@@ -286,8 +302,10 @@ main.pilar_main_wrapper {
 	font-weight: 600;
 	margin-bottom: 10px;
 }
-
 .pilar_input_group{
+	margin-bottom: 20px;
+}
+.pilar_input_group_radio{
 	margin-bottom: 20px;
 	gap: 10px;
 }
@@ -295,17 +313,19 @@ main.pilar_main_wrapper {
 	margin-bottom: 0px;
 }
 
-.pilar_input_group label{
+.pilar_input_group_radio label, .pilar_input_group label{
 	font-size: 14px;
 	font-weight: 500;
 	color: var(--dark);
-	margin-bottom: 20px;
 }
 
 /* Pilar Image Input */
 .pilar_input_group.image{
 	gap: initial;
 	flex-wrap: wrap;
+}
+.pilar_input_group.image label{
+	margin-bottom: 20px;
 }
 
 .pilar_image_input{
@@ -412,6 +432,18 @@ main.pilar_main_wrapper {
 	text-align: right;
 	margin-bottom: 30px;
 }
+.pilar_bookmark .button-settings .pilar_save{
+	display: block;
+}
+.pilar_bookmark .button-settings.active .pilar_save{
+	display: none;
+}
+.pilar_bookmark .button-settings .pilar_saved{
+	display: none;
+}
+.pilar_bookmark .button-settings.active .pilar_saved{
+	display: block;
+}
 
 .pilar_size_view{
 	text-align: right;
@@ -429,13 +461,14 @@ main.pilar_main_wrapper {
 .pilar_product_image{
 	max-width: 345px;
     width: 100%;
-    height: 100%;
+	height: 60rem;
     margin: 0 auto;
     display: flex;
     align-items: center;
 }
 .pilar_product_image img{
 	width: 100%;
+	max-height: 360px;
 	object-fit: contain;
 }
 
@@ -460,4 +493,43 @@ main.pilar_main_wrapper {
 	color: #F0F5F3;
 	font-size: 14px;
 	margin-bottom: 0px;
+}
+
+
+/* Print Item */
+.pilar_invoice .row.inline-flex{
+	margin-bottom: 10px;
+}
+
+.pilar_print_item button.button-print{
+	color: #026AA2;
+	border: 1px solid #B9E6FE;
+	background: #F0F9FF;
+	font-size: 12px;
+	padding: 0px 10px;
+}
+
+.pilar_print_item button.button-delete{
+	color: #026AA2;
+	border: 1px solid #FECDCA;
+	background: #FEF3F2;
+	font-size: 12px;
+	padding: 0px 10px;
+	border-radius: 6px;
+}
+.pilar_download_title{
+	margin-bottom: 0;
+}
+.pilar_item_description {
+	margin-bottom: 20px;
+}
+.pilar_item_description p{
+	margin-bottom: 5px;
+}
+
+/* ---------------------Cart--------------------- */
+
+.pilar_cart{
+	background-color: var(--white);
+	border-radius: 12px;
 }

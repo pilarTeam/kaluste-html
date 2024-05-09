@@ -65,46 +65,59 @@ $(document).ready(function(){
       	$(".breadcrumbs li:nth-child(-n+" + step + ")").addClass("active");
     }
 
-    // Function to mark the step as done in breadcrumbs
+    // Mark the step as done in breadcrumbs
     function markStepAsDone(step) {
       	$(".breadcrumbs li:nth-child(" + step + ")").addClass("done");
     }
-    
+
+    // Remove the step as done in breadcrumbs
 	function removeStepAsDone(step) {
 		$(".breadcrumbs li:nth-child(" + step + ")").removeClass("done");
     }
 
 
-	// Click event to open the modal
-    $(".pilar_modal_opener").click(function(event){
-		event.preventDefault();
-        $(".pilar_modal_box").addClass("active");
+
+	// Click event for opening the modal
+	$(".pilar_modal_opener").click(function(event){
+        event.preventDefault();
+        var modalParent = $(this).closest(".modal");
+        var modalBox = modalParent.find(".pilar_modal_box");
+        modalParent.find(".pilar_modal_box").removeClass("active");
+        modalBox.toggleClass("active");
     });
 
     // Click event to close the modal
     $(".pilar_modal_hide").click(function(event){
-		event.preventDefault();
-        $(".pilar_modal_box").removeClass("active");
+        event.preventDefault();
+        var modalBox = $(this).closest(".pilar_modal_box");
+        modalBox.removeClass("active");
     });
 });
 
 
 $(document).ready(function() {
-    // Add click event to each replicate image
-    $('.pilar_replicate img').on('click', function() {
-        // Remove 'active' class from all replicate items
-        $('.pilar_replicate li').removeClass('active');
-        
-        // Add 'active' class to the clicked replicate item
-        $(this).closest('li').addClass('active');
-        
-        // Get the source of the clicked replicate image
-        var newSrc = $(this).attr('src');
-        
-        // Change the source of the preview image with the source of the clicked replicate image
-        $('.pilar_preview_image img').attr('src', newSrc);
+
+	// Image Changer from modal
+	$('.pilar_replicate').each(function() {
+		$(this).find('li:first-child').addClass('active');
+	});
+
+	// Add click event to each replicate image
+	$('.pilar_replicate img').on('click', function() {
+		$(this).closest('.pilar_replicate').find('li').removeClass('active');
+		$(this).closest('li').addClass('active');
+		var newSrc = $(this).attr('src');
+		$('.pilar_preview_image img').attr('src', newSrc);
+	});
+
+	$('.pilar_replicate').each(function() {
+		$(this).find('li:first-child img').trigger('click');
+	});
+
+
+	// Reload the page when the anchor tag is clicked
+    $('#reloadPage').on('click', function(event) {
+        event.preventDefault();
+        window.location.reload();
     });
-    
-    // Trigger click event on the first replicate image to preview it by default
-    $('.pilar_replicate img:first').trigger('click');
 });
