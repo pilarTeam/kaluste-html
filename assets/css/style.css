@@ -533,3 +533,30 @@ main.pilar_main_wrapper {
 	background-color: var(--white);
 	border-radius: 12px;
 }
+
+
+
+
+
+/* RESPONSIVE */
+@media only screen and (max-width: 425px) {
+	.row .column {
+        margin-bottom: inherit;
+        padding: 0 1.0rem;
+    }
+
+	.row .column.column-50{
+		flex: 0 0 100%;
+		max-width: 100%;
+	}
+
+	.pilar_column_right .row:first-child{
+		flex-direction: row;
+	}
+
+	.row .column.column-90 {
+		display: block;
+		flex: 1 1 auto;
+	}
+	
+}
