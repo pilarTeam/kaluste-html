@@ -319,6 +319,7 @@ main.pilar_main_wrapper {
 .pilar_input_group_radio {
 	margin-bottom: 20px;
 	gap: 10px;
+	flex-wrap: wrap;
 }
 .pilar_input_group .column {
 	margin-bottom: 0px;
@@ -437,6 +438,10 @@ main.pilar_main_wrapper {
 .pilar_modal_body::scrollbar {
 	display: none;
 }
+
+.pilar_modal_body::scrollbar {
+	display: none;
+}
 /* Step */
 
 .pilar_step {
@@ -550,10 +555,48 @@ main.pilar_main_wrapper {
 	background-color: var(--white);
 	border-radius: 12px;
 }
+@media (max-width: 425px) {
+	.container {
+        max-width: 100%;
+        position: initial;
+    }
+	.pillar_product_footer .row{
+		flex-direction: row;
+	}
+	.row .column.column-10 {
+		padding: 0px 4px;
+	}
+	.pilar_column_left{
+		margin-bottom: 15px;
+	}
+	.pilar_column_right .row:first-child{
+		flex-direction: row;
+	}
+	.button.button-previous, .button.button-next{
+		padding: 0px 1.5rem;
+		font-size: 12px;
+	}
+	.pilar_image_input .row{
+        flex-direction: column;
+    }
+	.pilar_input_group.image{
+		flex-direction: row;
+	}
+	.pilar_input_group.image .column{
+		padding: 0px 10px;
+	}
+	.pilar_replicate .row{
+		flex-direction: row;
+	}
+	.pilar_replicate .column.column-10{
+		flex: 0 0 20% !important;
+    	max-width: 20% !important;
+	}
+}
 
 @media (max-width: 768px) {
 	.container {
-		max-width: 75rem;
+		max-width: 80rem;
 		position: initial;
 	}
 	.pilar_price_section .row.flex {
@@ -570,13 +613,94 @@ main.pilar_main_wrapper {
 
 	.pillar_product_footer.pilar_price_section {
 		background: var(--dark);
-		padding: 10px 20px;
+		padding: 20px 20px;
+	}
+
+	.button.button-cart {
+		padding: initial;
+		width: 100%;
+		justify-content: center;
+	}
+	.pilar_bookmark .button, .pilar_size_view .button, .pilar_form_Reset .button{
+		width: 30px;
+		height: 30px;
+	}
+	.pilar_bookmark svg, .pilar_size_view svg, .pilar_form_Reset svg{
+		width: 14px;
+	}
+	.pilar_bookmark, .pilar_size_view{
+		margin-bottom: 15px;
+	}
+
+	.pilar_card_body {
+		height: 37rem !important;
+	}
+	.pilar_product_image {
+		height: 45rem;
+	}
+
+	.pilar_card_header {
+		min-height: 170px;
+	}
+
+	.pilar_modal_box{
+		width: 100%;
+	}
+
+	.pilar_replicate .column.column-10{
+		flex: 0 0 10% !important;
+    	max-width: 10% !important;
 	}
 }
 
-/* @media (min-width: 768rem) {
-	.container {
-		max-width: 65rem;
-		position: initial;
+@media (max-width: 1024px) {
+	.pilar_price_section .row.flex {
+		flex-direction: column !important;
 	}
-} */
+	.button.button-cart {
+		padding: initial;
+		width: 100%;
+		justify-content: center;
+	}
+	.pilar_price_vat {
+        margin-bottom: 15px;
+    }
+
+	.pilar_card_header {
+		min-height: 170px;
+	}
+
+	.row .column.column-33{
+		flex: 0 0 50%;
+    	max-width: 50%;
+	}
+
+	.pilar_card_body {
+		height: 40rem;
+	}
+	.pilar_product_image {
+		height: 45rem;
+	}
+
+	.pilar_invoice .row.inline-flex{
+		flex-direction: column;
+	}
+	.pilar_invoice .pilar_print_item.float-right{
+		float: left;
+	}
+
+	.pilar_modal_header {
+		padding: 15px 25px;
+	}
+	.pilar_modal_body {
+		padding: 30px 25px;
+	}
+	.pilar_replicate .column.column-10{
+		flex: 0 0 20%;
+    	max-width: 20%;
+	}
+
+	.pilar_download_title {
+		margin-bottom: 15px;
+	}
+}
