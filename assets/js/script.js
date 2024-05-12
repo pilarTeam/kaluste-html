@@ -4,7 +4,7 @@ $(document).ready(function(){
     var $prevBtn = $("#prevBtn");
     var $nextBtn = $("#nextBtn");
     var $cartBtn = $('#cartBtn')
-
+	
     // Show the current step
     showStep(currentStep);
     showBreadcrumb(currentStep);
@@ -52,10 +52,17 @@ $(document).ready(function(){
 		if (currentStep === totalSteps) {
 			$nextBtn.addClass("disabled").text("Valmis");
 			$cartBtn.removeClass("disabled");
-		}else if (currentStep === totalSteps - 1) {
+			$(".pilar_bookmark").hide();
+			$(".pilar_form_Reset").hide();
+		}
+		else if (currentStep === totalSteps - 1) {
 			$nextBtn.removeClass("disabled").text('Viimeistellä');
+			$(".pilar_bookmark").show();
+			$(".pilar_form_Reset").show();
 		}else {
 			$nextBtn.removeClass("disabled").html('Seuraava <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="14" height="14" viewBox="0 0 14 14"><defs><clipPath><rect id="Rectangle_99" data-name="Rectangle 99" width="14" height="14" transform="translate(872.819 813.819)" fill="#f0f5f3"/></clipPath></defs><g id="chevion-next" transform="translate(-872.819 -813.819)"><g id="layer1" transform="translate(875.423 814)"><path id="path9429" d="M12.72,1726.66a.97.97,0,0,0-.638,1.718l5.935,5.085-5.935,5.083a.97.97,0,1,0,1.26,1.468l6.8-5.814a.97.97,0,0,0,0-1.476l-6.8-5.82a.969.969,0,0,0-.621-.245Z" transform="translate(-11.686 -1726.66)" fill="#f0f5f3"/></g></g></svg>');
+			$(".pilar_bookmark").show();
+			$(".pilar_form_Reset").show();
 		}
 	}
 

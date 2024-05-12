@@ -468,6 +468,10 @@ main.pilar_main_wrapper {
 	display: block;
 }
 
+.pilar_bookmark .button.active, .pilar_size_view .button.active, .pilar_form_Reset .button.active{
+	border-color: var(--vibrant);
+}
+
 .pilar_size_view {
 	text-align: right;
 	margin-bottom: 30px;
@@ -554,7 +558,102 @@ main.pilar_main_wrapper {
 .pilar_cart {
 	background-color: var(--white);
 	border-radius: 12px;
+	padding: 20px 15px;
+	min-height: 80vh;
 }
+
+.pilar_cart .pilar_card_header{
+	min-height: 50px;
+}
+
+.pilar_card_item{
+	background: #f2f2f2;
+	border-radius: 12px;
+	box-shadow: 0px 0px 15px #f2f2f2;
+}
+.pilar_card_item img{
+	height: 100%;
+	width: 100%;
+	object-fit: cover;
+}
+.pilar_card_item .pilar_card_body{
+	height: initial;
+}
+.pilar_card_item .pilar_card{
+	padding: 20px 20px;
+}
+
+.pilar_card_item .pilar_download_title{
+	margin-bottom: 15px;
+}
+.pilar_checkout_section{
+	padding: 0px 30px;
+}
+
+.pilar_checkout_section .summary-prices {
+    list-style: none;
+    padding: 0;
+}
+
+.pilar_checkout_section .summary-prices li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.pilar_checkout_section .summary-prices li span:first-child {
+    margin-right: auto;
+}
+
+.pilar_checkout_section .summary-prices li span:last-child {
+    margin-left: auto;
+}
+
+.pilar_card_item .pilar_item_description {
+	margin-bottom: 50px;
+}
+.pilar_unordered_list{
+	list-style: none;
+}
+.pilar_unordered_list span:first-child{
+	margin-right: 5px;
+}
+
+.pilar_card_item .pilar_print_item button.button-print{
+	color: #b54708;
+	background: #fffaeb;
+	border-color: #fce5a5;
+}
+.pilar_checkout_button{
+	text-align: right;
+	margin: 35px 0px;
+}
+
+.pilar_checkout_details{
+	background: #f9f9f9;
+	border-radius: 6px;
+	padding: 20px;
+}
+.pilar_checkout_details p{
+	margin-bottom: 5px;
+	font-weight: 500;
+	color: var(--dark);
+}
+.pilar_checkout_details .flex{
+	gap: 10px;
+}
+.pilar_checkout_details .flex p{
+	color: var(--vibrant);
+}
+.pilar_cart .button.button-next{
+	margin-top: 40px;
+}
+.pilar_checkout_section .summary-prices.pillar_subtotal{
+	font-weight: 700;
+	color: var(--dark);
+}
+
+/* ---------------------Checkout--------------------- */
 @media (max-width: 425px) {
 	.container {
         max-width: 100%;
@@ -585,6 +684,7 @@ main.pilar_main_wrapper {
 	.pilar_input_group.image .column{
 		padding: 0px 10px;
 	}
+
 	.pilar_replicate .row{
 		flex-direction: row;
 	}
@@ -625,6 +725,7 @@ main.pilar_main_wrapper {
 		width: 30px;
 		height: 30px;
 	}
+	
 	.pilar_bookmark svg, .pilar_size_view svg, .pilar_form_Reset svg{
 		width: 14px;
 	}
@@ -650,6 +751,14 @@ main.pilar_main_wrapper {
 	.pilar_replicate .column.column-10{
 		flex: 0 0 10% !important;
     	max-width: 10% !important;
+	}
+
+	.pilar_image_input .row{
+		flex-direction: column;
+	}
+	.pilar_input_group .row .column.column-80 {
+		flex: 0 0 100%;
+		max-width: 100%;
 	}
 }
 
